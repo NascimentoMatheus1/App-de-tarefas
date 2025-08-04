@@ -13,15 +13,21 @@ function addTodo(){
     const todoText = todoInput.value.trim();
     todoInput.value = ""
     if(todoText.length > 0){
-        allTodos.push(todoText);
+        const todoObject = {
+            text: todoText,
+            completed: false
+        }
+
+        allTodos.push(todoObject);
         updateTodoList();
         saveTodos();
     }
 
 }
 
-function createTodo(todoText, todoIndex){
+function createTodo(todo, todoIndex){
     const todoId = "todo-" + todoIndex;
+    const todoText = todo.text;
     const li = document.createElement('li');
     li.classList.add('todo');
     li.innerHTML = `
@@ -41,6 +47,13 @@ function createTodo(todoText, todoIndex){
     deleteButton.addEventListener("click", () => {
         deleteTodo(todoIndex);
     })
+
+    const checkbox = li.querySelector("input");
+    checkbox.addEventListener("change", ()=> {
+        allTodos[todoIndex].completed = checkbox.checked;
+        saveTodos();
+    })
+    checkbox.checked = todo.completed;
     return li
 }
 
