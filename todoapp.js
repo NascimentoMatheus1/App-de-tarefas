@@ -1,6 +1,7 @@
 const todoForm = document.getElementById("todo-form");
 const todoList = document.getElementById("todo-list");
-const todoInput = document.getElementById("input-text")
+const todoInput = document.getElementById("input-text");
+
 let allTodos = getTodos();
 updateTodoList();
 

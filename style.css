@@ -1,10 +1,18 @@
 :root{
+    --primary-color:#fff;
+    --secondary-color:#8f8f8f;
+    --third-color: #f3f4f6;
+    --text-color: #292a2d;
+    --accent-color: #666666;
+
+}
+
+.dark-mode {
     --primary-color: #292a2d;
     --secondary-color: #212327;
     --third-color: #404045;
     --text-color: #fff;
-    --accent-color: #8f8f8f;
-
+    --accent-color: #8f8f8f; 
 }
 
 
@@ -20,13 +28,15 @@ html {
 }
 
 body {
+    position: relative;
     min-height: 100vh;
     padding: 10px;
     background-color: var(--primary-color);
-
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 body > h1 {
@@ -35,7 +45,33 @@ body > h1 {
     font-size: 3rem;
     font-weight: 800;
     text-align: center;
+    color: var(--text-color);
 }
+#switch-theme-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: var(--third-color);
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#switch-theme-button svg:last-child{
+    display: none;
+}
+
+.dark-mode #switch-theme-button svg:first-child{
+    display: none;
+}
+
+.dark-mode #switch-theme-button svg:last-child{
+    display: block;
+    fill: var(--text-color);
+}
+
 
 #wrapper {
     width: 700px;
@@ -92,11 +128,11 @@ form{
     border-radius: 15px;
     margin-bottom: 10px;
     padding: 0px 16px;
-    
 
     display: flex;
     align-items: center;
     gap: 10px;
+    
 }
 
 input[type="checkbox"] {
@@ -113,7 +149,9 @@ input[type="checkbox"]:checked ~ .todo-text{
     padding: 15px;
     padding-right: 0;
     transition: 1000ms ease;
-}
+    word-break: break-all;
+    color: var(--text-color);
+}   
 
 .custom-checkbox{
     border: 2px solid var(--text-color);
