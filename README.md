@@ -1,6 +1,6 @@
 # Aplicativo de lista de tarefas que ajuda os usuários a organizar e gerenciar suas atividades diárias, semanais ou de projetos.
 
-## As tarefas ficam salvas no armazenamento local do navegador, salvando-as mesmo quando a página é fechada.
+## As tarefas ficam salvas no armazenamento local do navegador, salvando-as mesmo quando a página é atualizada ou fechada.
 
 ## [Visualização (Live Preview)](https://nascimentomatheus1.github.io/App-de-tarefas/)
 
