@@ -14,7 +14,19 @@
 
 ### - Mudar para modo noturno
 
-##
+## Conhecimentos adquiridos:
+
+### - Manipulação da DOM
+
+### - Estilização de Componentes
+
+### - Gerenciamento de Estado
+
+### - CRUD
+
+### - Event Handling
+
+### - Persistência com LocalStorage
 
 ## Projeto baseado nesse tutorial: [Youtube: Coding2GO](https://www.youtube.com/watch?v=THEKW1gITJI)
 
